@@ -3,6 +3,12 @@ const morgan = require("morgan");
 const cors = require("cors");
 const path = require("path");
 
+// Connection to DB
+const mongoose = require("mongoose");
+
+const uri = "mongodb://localhost:27017/mevn-backend";
+const options = { useNewUrlParser: true, useCreateIndex: true };
+
 const app = express();
 
 // Middlewares
@@ -16,8 +22,11 @@ app.get("/", (req, res) => {
 	res.send("Hello World!");
 });
 
+app.use("/api", require("./routes/nota"));
+
 // Middleware para Vue.js router modo history
 const history = require("connect-history-api-fallback");
+const { Router } = require("express");
 app.use(history());
 
 // Static
