@@ -1,0 +1,24 @@
+{
+	"name": "backend",
+	"version": "1.0.0",
+	"description": "",
+	"main": "app.js",
+	"scripts": {
+		"start": "babel-node app.js --exec",
+		"dev": "nodemon",
+		"devbabel": "nodemon app.js --exec babel-node"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"connect-history-api-fallback": "^1.6.0",
+		"cors": "^2.8.5",
+		"express": "^4.17.1",
+		"morgan": "^1.10.0",
+		"@babel/cli": "^7.12.10",
+		"@babel/core": "^7.12.10",
+		"@babel/node": "^7.12.10",
+		"@babel/preset-env": "^7.12.11"
+	}
+}
